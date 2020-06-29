@@ -27,4 +27,23 @@ In the above command
 	/bin/bash - blocking application that will be launched inside container
 
 
+In order to provide internet access to your containers, make sure the below conf is done
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+on CentOS Lab machine
++++++++++++++++++++++
+Edit /etc/sysctl.conf and add the below line
+net.bridge.bridge.nf-call-iptables=1
+
+Make sure the below services are restarted
+
+systemctl daemon-reload
+systemctl restart network
+systemctl restart docker
+
+docker start ubuntu1 
+
+Get inside the ubuntu1 container using below commmand
+docker exec -it ubuntu1 bash
+
+apt update && apt install -y vim
 
