@@ -7,11 +7,10 @@ metadata:
   namespace: default
 spec:
   ports:
-  - nodePort: 31000
-    port: 3306 
+  - port: 3306 
     protocol: TCP
     targetPort: 3306
   selector:
     app: mysql
     tier: backend
-  type: NodePort
+  type: ClusterIP 
