@@ -1,0 +1,30 @@
+CentOs :- Abridge@123
+
+systemctl enable docker && systemctl start docker
+
+systemctl status docker
+
+
+docker image path:-
+/var/lib/docker/image/overlay2/imagedb/content/sha256
+
+to run a container
+
+docker run hello-world
+
+to run a docker with out pulling
+
+docker run -it ubuntu:16.04 /bin/bash
+
+
+docker run -d --name ngnix --hostname ngnix -p 8080:80 ngnix:1.08
+
+docker exec -it ngnix1 sh
+
+
+
+kubectl get nodes
+
+source ~/.bashrc
+
+kubectl get nodes
